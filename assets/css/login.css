@@ -1,0 +1,247 @@
+@media (min-width: 768px) {
+  .mobileheader {
+    display: none;
+  }
+  .body {
+    margin: auto;
+    width: 750px;
+    background-image: url("../images/background.jpg");
+    z-index: 0;
+  }
+  .header {
+    margin: auto;
+    width: 750px;
+    height: 300px;
+  }
+  .footer {
+    width: 750px;
+    height: 200px;
+    margin: auto;
+  }
+  .container {
+    margin: auto;
+    width: 750px;
+  }
+  .container .row {
+    width: 100%;
+  }
+  .container .row .col-sm-2 {
+    float: left;
+    width: 30%;
+    box-sizing: border-box;
+  }
+}
+@media (min-width: 992px) {
+  .mobileheader {
+    display: none;
+  }
+  .body {
+    margin: auto;
+    width: 970px;
+    background-image: url("../images/background.jpg");
+    z-index: 0;
+  }
+  .header {
+    margin: auto;
+    width: 970px;
+    height: 300px;
+  }
+  .footer {
+    width: 970px;
+    height: 200px;
+    margin: auto;
+  }
+  .container {
+    margin: auto;
+    width: 970px;
+  }
+  .container .row {
+    width: 100%;
+  }
+  .container .row .col-md-2 {
+    float: left;
+    width: 30%;
+    box-sizing: border-box;
+  }
+}
+@media (min-width: 1200px) {
+  .mobileheader {
+    display: none;
+  }
+  .body {
+    margin: auto;
+    width: 1170px;
+    background-image: url("../images/background.jpg");
+    z-index: 0;
+  }
+  .header {
+    margin: auto;
+    width: 1170px;
+    height: 300px;
+  }
+  .footer {
+    width: 1170px;
+    height: 200px;
+    margin: auto;
+  }
+  .container {
+    margin: auto;
+    width: 1170px;
+  }
+  .container .row {
+    width: 100%;
+  }
+  .container .row .col-lg-3 {
+    float: left;
+    width: 20%;
+    box-sizing: border-box;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+@media (min-width: 769px) {
+  .header {
+    height: 250px;
+  }
+  .header .top {
+    padding-left: 10%;
+    padding-top: 30px;
+    height: 140px;
+    position: relative;
+  }
+  .header .top .logo {
+    float: left;
+    position: absolute;
+    width: 30px;
+    top: 30px;
+    margin-top: 30px;
+  }
+  .header .top .logo:before,
+  .header .top .logo:after {
+    display: table;
+    line-height: 0;
+    content: "";
+  }
+  .header .top .logo:after {
+    clear: both;
+  }
+  .header .top h1 {
+    color: #325f70;
+    float: left;
+    position: absolute;
+    margin-left: 40px;
+    top: 30px;
+    font-family: "Ebrima";
+    font-style: italic;
+  }
+  .header .top h1:before,
+  .header .top h1:after {
+    display: table;
+    line-height: 0;
+    content: "";
+  }
+  .header .top h1:after {
+    clear: both;
+  }
+  .header .top .inform {
+    width: 300px;
+    height: 70px;
+    position: absolute;
+    margin-top: 30px;
+    right: 10%;
+  }
+  .header .top .inform p {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+  .header .top .inform ul {
+    margin: 0;
+    padding: 0;
+  }
+  .header .top .inform li {
+    display: inline;
+  }
+  .header .menu {
+    background-color: #000a52;
+    display: flex;
+    width: 100%;
+    height: 40px;
+    padding-left: 10%;
+  }
+  .header .menu .item_of_menu {
+    width: 11.42857143%;
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  .header .menu .item_of_menu a {
+    font-size: 18px;
+    font-family: "Droid Sans";
+    color: #ffffff;
+  }
+  .footer {
+    height: 250px;
+  }
+  .footer .footer-container {
+    display: flex;
+    width: 80%;
+    padding: 0;
+  }
+  .footer .footer-container .partner {
+    float: left;
+    height: 100px;
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .footer .footer-container .partner img {
+    position: absolute;
+    width: 80%;
+    opacity: 0.8;
+  }
+  .footer .another {
+    float: left;
+    width: 100%;
+    height: 150px;
+    padding-right: 10%;
+    padding: 50px 10% 30px;
+  }
+  .footer .another .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+  }
+  .footer .another .links p {
+    margin-right: 5px;
+    bottom: 0;
+  }
+  .footer .another .links .p {
+    display: flex;
+  }
+  .footer .another .social-media {
+    display: flex;
+    float: right;
+    width: 135px;
+    height: 40px;
+  }
+  .footer .another .social-media .image {
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+    margin-top: -10px;
+    background: rosybrown;
+  }
+}
+@media (min-width: 769px) {
+  .login {
+    margin: auto;
+    width: 50%;
+    margin-bottom: 50px;
+  }
+}

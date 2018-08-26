@@ -1,0 +1,252 @@
+//параметры сетки
+@bps:			768px, 992px, 1200px;
+@onbps:			750px, 970px, 1170px;
+@prefs:			sm,		md,		lg;
+@cols:			2,		2,		3;
+@pads:			8%,		12%,	12%;
+
+@items_in_menu: 7;
+@left_side: 10%;
+@site_width: 80%;
+@products_width: 60%;
+@categories_width: 20%;
+//цвета
+@color_menu:    #000a52;
+@color_header:  #325f70;
+@col_prim:		#1B1B1E;
+@col_sec:		#6D676E;
+@col_trit:		#FFD700;
+@col_fort:		#96031A;
+
+.clearfix() {
+  &:before,
+  &:after {
+    display: table;
+    line-height: 0;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }}
+
+.flex_cols(@i) when (@i > 0) {
+  .flex_cols(@i - 1);
+
+  @media (min-width: extract(@bps, @i)) {
+
+    .body{
+      margin: auto;
+      width: extract(@onbps, @i);
+      background-image: url("../images/background.jpg");
+      z-index: 0;
+    }
+    .header{
+
+      margin: auto;
+      //width: extract(@bps, @i);
+      //margin: auto;
+      width: extract(@onbps, @i);
+      height: 300px;
+      // background-color: @hfcolor;
+
+    }
+    .footer{
+      width: extract(@onbps, @i);
+      height: 200px;
+      margin: auto;
+      //background-color: @hfcolor;
+      //display: flex;
+
+    }
+    .container
+    {
+      margin: auto;
+      width: extract(@onbps, @i);
+      @tpref: extract(@prefs, @i);
+      @tcol: extract(@cols, @i);
+      .row{
+        width: 100%;
+        .col-@{tpref}-@{tcol}
+        {
+          float: left;
+          width: @products_width/@tcol;
+          box-sizing: border-box;
+        }
+      }
+
+    }
+  }
+}
+
+.flex_cols(3);
+
+*{
+  box-sizing: border-box;
+}
+
+
+@media (min-width: 769px) {
+  .header {
+    height: 250px;
+    .top{
+      padding-left: @left_side;
+      padding-top: 30px;
+      height: 140px;
+      position: relative;
+      .logo{
+        float: left;
+        position: absolute;
+        width: 30px;
+        //height: 30px;
+        top: 30px;
+        margin-top: 30px;
+        //padding-left: @left_side;
+        .clearfix();
+      }
+
+      h1{
+        color: @color_header;
+        float: left;
+        position: absolute;
+        //top: 30px;
+        margin-left: 40px;
+        top: 30px;
+        font-family: "Ebrima";
+        font-style: italic;
+        .clearfix();
+      }
+
+      .inform{
+        width: 300px;
+        height: 70px;
+        position: absolute;
+        margin-top: 30px;
+        right: @left_side;
+        p{
+          margin-top: 3px;
+          margin-bottom: 3px;
+        }
+        ul{
+          margin: 0;
+          padding: 0;
+        }
+        li{
+          display: inline;
+        }
+      }
+
+    }
+
+    .menu {
+      // position: relative;
+      background-color: @color_menu;
+      display: flex;
+      width: 100%;
+      height: 40px;
+      padding-left: @left_side;
+
+      .item_of_menu {
+        width: 80%/7 ;
+        height: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        a {
+          font-size: 18px;
+          font-family: "Droid Sans";
+          color: rgb(255, 255, 255);
+        }
+
+      }
+    }
+
+  }
+
+
+  .footer {
+    height: 250px;
+    .footer-container {
+      display: flex;
+      width: @site_width;
+      padding: 0;
+      // padding-left: @left_side;
+      //padding-right: @left_side;
+      //margin-right: 0;
+      //margin-left: 0;
+      .partner {
+        float: left;
+        height: 100px;
+        //border: 1px solid black;
+        position: relative;
+        padding-left: 0;
+        padding-right: 0;
+        display: flex;
+        justify-content: center;
+        //align-items: center;
+        img{
+          position: absolute;
+          width: 80%;
+          //height: 100px;
+          opacity: 0.8;
+        }
+      }
+
+    }
+
+    .another {
+      float: left;
+      width: 100%;
+      height: 150px;
+      padding-right: @left_side;
+
+      padding: 50px @left_side 30px;
+      .links{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 20px;
+        p{
+          margin-right: 5px;
+          bottom: 0;
+        }
+        .p{
+          display: flex;
+        }
+      }
+
+      .social-media{
+        //margin-bottom: 40px;
+        display: flex;
+        float: right;
+        width: 135px;
+        height: 40px;
+
+        .image{
+          width: 40px;
+          height: 40px;
+          margin-left: 5px;
+          margin-top: -10px;
+          background: rosybrown;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .reg{
+    margin: 20px auto;
+    border-radius: 4px;
+    box-shadow: 0 0 2px 2px #b9def0;
+    text-indent: 30px;
+    padding: 20px 10px 20px 0;
+    width: 80%;
+    margin-bottom: 50px;
+  }
+  
+}
+
+
+
+

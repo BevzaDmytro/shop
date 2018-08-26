@@ -1,0 +1,260 @@
+@media (min-width: 768px) {
+  .body {
+    margin: auto;
+    width: 750px;
+    background-image: url("../images/background.jpg");
+    z-index: 0;
+  }
+  .header {
+    margin: auto;
+    width: 750px;
+    height: 250px;
+  }
+  .footer {
+    width: 750px;
+    height: 200px;
+    margin: auto;
+  }
+  .container {
+    margin: auto;
+    width: 750px;
+  }
+  .container .row {
+    width: 100%;
+  }
+  .container .row .col-sm-2 {
+    float: left;
+    width: 30%;
+    box-sizing: border-box;
+  }
+}
+@media (min-width: 992px) {
+  .body {
+    margin: auto;
+    width: 970px;
+    background-image: url("../images/background.jpg");
+    z-index: 0;
+  }
+  .header {
+    margin: auto;
+    width: 970px;
+    height: 250px;
+  }
+  .footer {
+    width: 970px;
+    height: 200px;
+    margin: auto;
+  }
+  .container {
+    margin: auto;
+    width: 970px;
+  }
+  .container .row {
+    width: 100%;
+  }
+  .container .row .col-md-2 {
+    float: left;
+    width: 30%;
+    box-sizing: border-box;
+  }
+}
+@media (min-width: 1200px) {
+  .body {
+    margin: auto;
+    width: 1170px;
+    background-image: url("../images/background.jpg");
+    z-index: 0;
+  }
+  .header {
+    margin: auto;
+    width: 1170px;
+    height: 250px;
+  }
+  .footer {
+    width: 1170px;
+    height: 200px;
+    margin: auto;
+  }
+  .container {
+    margin: auto;
+    width: 1170px;
+  }
+  .container .row {
+    width: 100%;
+  }
+  .container .row .col-lg-3 {
+    float: left;
+    width: 20%;
+    box-sizing: border-box;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+@media (min-width: 769px) {
+  .main {
+    height: 900px;
+    width: 80%;
+    margin-left: 10%;
+  }
+  .main .categories {
+    position: relative;
+    width: 20%;
+    float: left;
+    height: 700px;
+  }
+  .main .product {
+    position: relative;
+    width: 80%;
+    height: 800px;
+    float: left;
+  }
+  .main .product .back {
+    position: absolute;
+    left: 40px;
+    top: 25px;
+  }
+  .main .product .image {
+    position: absolute;
+    top: 54px;
+    left: 40px;
+    height: 300px;
+    width: 300px;
+  }
+  .main .product .image img {
+    width: 100%;
+    height: 100%;
+  }
+  .main .product .first {
+    width: 50%;
+    position: absolute;
+    top: 390px;
+    left: 40px;
+  }
+  .main .product .add {
+    position: absolute;
+    top: 55px;
+    left: 350px;
+    width: 30%;
+    height: 120px;
+  }
+  .main .product .add .count {
+    width: 40%;
+  }
+  .main .product .add .link-button {
+    margin-top: 10px;
+    width: 80%;
+    height: 50px;
+    border-radius: 3px;
+    border: 1px solid #333;
+    /* Рамка */
+    display: inline-block;
+    padding: 5px 15px;
+    /* Поля */
+    text-decoration: none;
+    /* Убираем подчёркивание */
+    background-color: green;
+    color: white;
+  }
+  .main .comment {
+    width: 30%;
+    height: 520px;
+    position: absolute;
+    left: 350px;
+    top: 180px;
+    display: flex;
+    flex-direction: column;
+  }
+  .main .comment .input-com {
+    display: flex;
+    flex-direction: column;
+  }
+  .main .comment .input-com input {
+    width: 100%;
+  }
+  .main .comment .other {
+    width: 100%;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  .main .comment li {
+    margin-top: 0px;
+  }
+}
+@media (min-width: 1200px) {
+  .main .product {
+    position: relative;
+    width: 80%;
+    height: 800px;
+    float: left;
+  }
+  .main .product .back {
+    position: absolute;
+    left: 40px;
+    top: 25px;
+  }
+  .main .product .image {
+    position: absolute;
+    top: 54px;
+    left: 40px;
+    height: 300px;
+    width: 300px;
+  }
+  .main .product .image img {
+    width: 100%;
+    height: 100%;
+  }
+  .main .product .first {
+    width: 40%;
+    position: absolute;
+    top: 390px;
+    left: 40px;
+  }
+  .main .product .add {
+    position: absolute;
+    top: 55px;
+    left: 400px;
+    width: 20%;
+    height: 100px;
+  }
+  .main .product .add .link-button {
+    width: 120px;
+    height: 50px;
+    border-radius: 3px;
+    border: 1px solid #333;
+    /* Рамка */
+    display: inline-block;
+    padding: 5px 15px;
+    /* Поля */
+    text-decoration: none;
+    /* Убираем подчёркивание */
+    background-color: green;
+    color: white;
+  }
+  .main .product .comment {
+    width: 30%;
+    height: 500px;
+    position: absolute;
+    left: 400px;
+    top: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+  .main .product .comment .input-com {
+    display: flex;
+    flex-direction: column;
+  }
+  .main .product .comment .input-com input {
+    width: 100%;
+  }
+  .main .product .comment .other {
+    width: 100%;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  .main .product .comment li {
+    margin-top: 0px;
+  }
+}

@@ -1,0 +1,147 @@
+//параметры сетки
+@bps:			768px, 992px, 1200px;
+@onbps:			750px, 970px, 1170px;
+@prefs:			sm,		md,		lg;
+@cols:			2,		2,		3;
+@pads:			8%,		12%,	12%;
+
+@items_in_menu: 7;
+@left_side: 10%;
+@site_width: 80%;
+@products_width: 60%;
+@categories_width: 20%;
+//цвета
+@color_menu:    #000a52;
+@color_header:  #325f70;
+@col_prim:		#1B1B1E;
+@col_sec:		#6D676E;
+@col_trit:		#FFD700;
+@col_fort:		#96031A;
+
+
+
+@media (min-width: 769px) {
+  .actions {
+    width: @site_width;
+    height: 50px;
+    margin-left: @left_side;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    .clear {
+
+    }
+  }
+
+  .products{
+  margin-left: @left_side;
+  display: flex;
+  flex-direction: column;
+  .product{
+    display: flex;
+    flex-direction: row;
+    width: @site_width;
+    margin-bottom: 30px;
+    //height: 250px;
+    img{
+      width: 200px;
+      height: 200px;
+      margin-right: 5px;
+    }
+
+    table{
+      width: 300px;
+      margin-right: 5px;
+    }
+    }
+
+}
+
+.emptycart{
+  margin: 20px auto;
+  border-radius: 4px;
+  box-shadow: 0 0 2px 2px #b9def0;
+  text-indent: 30px;
+  padding: 20px 10px 20px 0;
+  width: 80%;
+  margin-bottom: 50px;
+}
+
+}
+
+@media (min-width: 993px) {
+  .actions {
+    width: @site_width;
+    height: 50px;
+    margin-left: @left_side;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    .clear {
+
+    }
+  }
+
+  .products{
+    margin-left: @left_side;
+    display: flex;
+    flex-direction: column;
+    .product{
+      display: flex;
+      flex-direction: row;
+      width: @site_width;
+      margin-bottom: 30px;
+      //height: 250px;
+      img{
+        width: 200px;
+        height: 200px;
+        margin-right: 40px;
+      }
+
+      table{
+        width: 300px;
+        margin-right: 40px;
+      }
+    }
+
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .actions {
+    width: @site_width;
+    height: 50px;
+    margin-left: @left_side;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    .clear {
+
+    }
+  }
+
+  .products{
+    margin-left: @left_side;
+    display: flex;
+    flex-direction: column;
+    .product{
+      display: flex;
+      flex-direction: row;
+      width: @site_width;
+      margin-bottom: 30px;
+      //height: 250px;
+      img{
+        width: 200px;
+        height: 200px;
+      }
+
+      table{
+        width: 300px;
+      }
+    }
+
+  }
+
+}
+
