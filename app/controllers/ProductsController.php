@@ -18,12 +18,10 @@ class ProductsController extends Controller
 
     public function run(){
        // session_start();
-
         if(empty($_GET['page'])){
             $page = 1;
         }
         else $page = $_GET['page'];
-
 
         $products = $this->filtration();
 
@@ -49,15 +47,12 @@ class ProductsController extends Controller
         if(!empty($_GET['filter'])){
             $_SESSION['filter'] = $_GET['filter'];
             if(!empty($_GET['param'])) $_SESSION['param'] = $_GET['param'];
-
             unset($_GET);
         }
 
         if(!empty($_SESSION['filter']))
         {
-
             if( $_SESSION['param'] != "desc"){
-//                var_dump($_SESSION['param']);
                 return  Product::select()->orderBy($_SESSION['filter'])->get();
             }
             else  return  Product::select()->orderBy($_SESSION['filter'])->desc()->get();

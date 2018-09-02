@@ -12,7 +12,6 @@ require_once '.\app\controllers\ProductController.php';
 require_once '.\app\controllers\RegistrationController.php';
 require_once '.\app\controllers\MainController.php';
 require_once '.\app\controllers\CartController.php';
-require_once '.\app\controllers\AboutController.php';
 
 class Router
 {

@@ -50,50 +50,6 @@ class CartController extends Controller
 
     public function makeOrder(){
         $cart = new Cart();
-        $identificators = $cart->getProducts();
-        $args = [
-            "done" => false
-        ];
-
-        if(isset($_SESSION['user'])){
-            foreach ($identificators as $id){
-                $currentProduct = Product::select()->where("id_product","=",$id)->get();
-                $attrs = [
-                    "login" => $_SESSION['user'],
-                    "product" => $currentProduct[0]->name,
-                    "cost" => $currentProduct[0]->price
-                ];
-                $order = new Order($attrs);
-                $order->create();
-            }
-            $cart->delete();
-
-            $args = [
-                "done" => true
-            ];
-        }
-
-        if (isset($_POST['email'])){
-            foreach ($identificators as $id){
-
-                $currentProduct = Product::select()->where("id_product","=",$id)->get();
-                $attrs = [
-                    "login" => $_POST['email'],
-                    "product" => $currentProduct[0]->name,
-                    "cost" => $currentProduct[0]->price
-                ];
-                $order = new Order($attrs);
-                $order->create();
-            }
-            $cart->delete();
-            unset($_POST);
-
-            $args = [
-                "done" => true
-            ];
-        }
-        //if(isset($_POST['']))
-
-        $this->view->renderAll("makeorder",$args,"template","makeorder");
+        $this->view->renderAll("makeorder",$cart->newOrder(),"template","makeorder");
     }
 }

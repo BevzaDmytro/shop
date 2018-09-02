@@ -41,4 +41,50 @@ class Cart
         unset($_SESSION['cart']);
         unset($this->products);
     }
+
+    public function newOrder(){
+        $identificators = $this->getProducts();
+        $args = [
+            "done" => false
+        ];
+        if(isset($_SESSION['user'])){
+            foreach ($identificators as $id){
+                $currentProduct = Product::select()->where("id_product","=",$id)->get();
+                $attrs = [
+                    "login" => $_SESSION['user'],
+                    "product" => $currentProduct[0]->name,
+                    "cost" => $currentProduct[0]->price
+                ];
+                $order = new Order($attrs);
+                $order->create();
+            }
+            $this->delete();
+
+            $args = [
+                "done" => true
+            ];
+        }
+
+        if (isset($_POST['email'])){
+            foreach ($identificators as $id){
+
+                $currentProduct = Product::select()->where("id_product","=",$id)->get();
+                $attrs = [
+                    "login" => $_POST['email'],
+                    "product" => $currentProduct[0]->name,
+                    "cost" => $currentProduct[0]->price
+                ];
+                $order = new Order($attrs);
+                $order->create();
+            }
+            $this->delete();
+            unset($_POST);
+
+            $args = [
+                "done" => true
+            ];
+        }
+
+        return $args;
+    }
 }
